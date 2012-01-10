@@ -1,51 +1,51 @@
-body {
-  margin : 0;
-  padding : 0;
-  border-color : #cc0000;
-  background-color : #ffffff;
-  color : #000000;
+#container
+{
+width: 90%;
+margin: 10px auto;
+background-color: #fff;
+color: #333;
+border: 1px solid gray;
+line-height: 130%;
 }
 
-p, ul, ol, li {
-  font : 10pt Arial,geneva,helvetica;
+#top
+{
+padding: .5em;
+background-color: #ddd;
+border-bottom: 1px solid gray;
 }
 
-h1 {
-  font : bold 14pt Arial, Helvetica, geneva;
+#top h1
+{
+padding: 0;
+margin: 0;
 }
 
-h2 {
-  font : bold 12pt Arial, Helvetica, geneva;
+#leftnav
+{
+float: left;
+width: 160px;
+margin: 0;
+padding: 1em;
 }
 
-#leftnavigation {
-  position : absolute;
-  left : 0;
-  width : 150px;
-  margin-left : 10px;
-  margin-top : 20px;
-  color : #000000;
-  padding : 3px;
+#content
+{
+margin-left: 200px;
+border-left: 1px solid gray;
+padding: 1em;
+max-width: 36em;
 }
 
-#rightnavigation {
-  position : absolute;
-  left : 80%;
-  top : 20px;
-  width : 140px;
-  padding-left : 10px;
-  z-index : 3;
-  color : #000000;
-  padding : 3px;
+#footer
+{
+clear: both;
+margin: 0;
+padding: .5em;
+color: #333;
+background-color: #ddd;
+border-top: 1px solid gray;
 }
 
-#content {
-  top : 0px;
-  margin : 0px 25% 0 165px;
-  padding : 3px;
-  color : #000000;
-}
-
-#content h1, #content h2 {
-  color : #cc0000;
-}
+#leftnav p { margin: 0 0 1em 0; }
+#content h2 { margin: 0 0 .5em 0; }
