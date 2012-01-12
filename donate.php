@@ -4,7 +4,7 @@
 
 <div id="content">
   <h2>We accept tips for redwine</h2>
-  <p>More about wine</p>
+  <p>More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. More about wine. </p>
 </div>
     
 <?php echo(footer()); ?>

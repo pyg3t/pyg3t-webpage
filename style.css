@@ -1,11 +1,22 @@
+/* ========== Style sheet for the PyG3T and PoProofRead homepage ==========
+
+   A "*" in a comment means that the concept is explained in this header.   
+
+   padding: Space between the element and the border (inside the border).
+   margin : Space around elements (outside the border).
+   */
+
+
+/* Contains the entire page and therefore applies to all content unless
+   overwritten */
 #container
 {
-width: 90%;
-margin: 10px auto;
+width: 90%;              /* Restrict page to 90% of the total width */
+margin: 10px auto;       /* auto means determined by browser. */
 background-color: #fff;
-color: #333;
+color: #333;             /* Font color */
 border: 1px solid gray;
-line-height: 130%;
+line-height: 130%;       /* Add a little more space between lines of text */
 }
 
 #top
@@ -61,3 +72,7 @@ padding-left: 10px;
 margin-left: 0px;
 }
 */
+
+/* ######################################################################
+
+   */
