@@ -3,10 +3,10 @@
 <?php echo(title_and_navigation()); ?>
 
 <div id="content">
-  <h2>Pyg3t</h2>
-  <p>Whoop this is the best toolkit ever</p>
+  <h2>PoProofRead homepage</h2>
+  <p>Bla</p>
 </div>
-
+    
 <?php echo(footer()); ?>
 
 

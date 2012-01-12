@@ -47,5 +47,17 @@ background-color: #ddd;
 border-top: 1px solid gray;
 }
 
-#leftnav p { margin: 0 0 1em 0; }
+#leftnav p{ margin: 0 0 1em 0; }
 #content h2 { margin: 0 0 .5em 0; }
+
+#leftnav ul{
+list-style: none;
+/* margin-left: 0px; */
+padding-left: 10px;
+}
+
+/*
+#leftnav li{
+margin-left: 0px;
+}
+*/

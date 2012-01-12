@@ -3,10 +3,10 @@
 <?php echo(title_and_navigation()); ?>
 
 <div id="content">
-  <h2>Title for this page</h2>
-  <p>Content</p>
+  <h2>Pyg3t</h2>
+   <p>Whoop, PyG3T, this is the best toolkit ever</p>
 </div>
-    
+
 <?php echo(footer()); ?>
 
 
