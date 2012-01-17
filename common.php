@@ -82,10 +82,10 @@ class BlogPost
   var $date;
   var $ts;
   var $link;
-  var $author;
-  var $author_link;
   var $title;
   var $text;
+  var $author;
+  var $author_link;
 }
 
 class BlogFeed
@@ -111,20 +111,6 @@ class BlogFeed
 	$post->text = (string) $item->content;
 	$post->author = (string) $item->author->name;
 	$post->author_link = (string) $item->author->uri;
-
-	// Create summary as a shortened body and remove images, extraneous line breaks, etc.
-	$summary = $post->text;
-	$summary = eregi_replace("<img[^>]*>", "", $summary);
-	$summary = eregi_replace("^(<br[ ]?/>)*", "", $summary);
-	$summary = eregi_replace("(<br[ ]?/>)*$", "", $summary);
-	
-	// Truncate summary line to 100 characters
-	$max_len = 100;
-	if(strlen($summary) > $max_len){
-	  $summary = substr($summary, 0, $max_len) . '...';
-	}
-	
-	$post->summary = $summary;
 	
 	$this->posts[] = $post;
       }
@@ -132,6 +118,9 @@ class BlogFeed
 
   function GenerateHtml($level){
     global $tab;
+
+    $this->posts = $this->SortByDate($this->posts);
+
     echo("\n");
     foreach($this->posts as $entry){
       p($level, "<div id=\"news_item\">\n");
@@ -142,7 +131,8 @@ class BlogFeed
 	"</a> on " . strftime("%G-%m-%d", $entry->ts) . "\n");
       p($level+1, "</h4>\n");
       $text = explode("\n", $entry->text);
-      $list = False;
+      $text = $this->Listefy($text);
+
       foreach($text as $line){
 	if(substr($line, 0, 3) == "<p>"){
 	  p($level+1, wordwrap($line, 80, "\n" . str_repeat($tab, $level+1)));
@@ -154,6 +144,43 @@ class BlogFeed
 
       p($level,   "</div>\n");
     }
+  }
+
+  function SortByDate($posts){
+    $ret = Array();
+    $tmp = Array();
+    foreach($posts as $post){
+      $tmp[$post->ts] = $post;
+    }
+    arsort($tmp);
+    foreach($tmp as $post){
+      $ret[] = $post;
+    }
+    return $ret;
+  }
+
+  function Listefy($text){
+    global $tab;
+    $out = Array();
+    $list = False;
+    foreach($text as $line){
+      if(substr($line, 0, 8) == "&nbsp;* "){
+	if ($list){
+	  $out[] = $tab . "<li>" . substr($line, 8, -6) . "</li>";
+	} else {
+	  $list = True;
+	  $out[] = "<lu>";
+	}
+      } else {
+	if ($list){
+	  $out[] = "</lu>";
+	  $list = False;
+	} else {
+	  $out[] = $line;
+	}
+      }
+    }
+    return $out;
   }
 }
 

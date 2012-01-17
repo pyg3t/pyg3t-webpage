@@ -5,11 +5,13 @@
       <div id="content">
 	<h2>PyG3T and PoProofRead news</h2>
   
-      <?php
-      $feed = new BlogFeed('http://feeds.launchpad.net/poproofread/announcements.atom');
-      $feed->BlogFeed('http://feeds.launchpad.net/poproofread/announcements.atom');
-      $feed->GenerateHtml(4);
-      ?>
+<?php
+$pop_feed = "http://feeds.launchpad.net/poproofread/announcements.atom";
+$pyg3t_feed = "http://feeds.launchpad.net/pyg3t/announcements.atom";
+$feed = new BlogFeed($pop_feed);
+$feed->BlogFeed($pyg3t_feed);
+$feed->GenerateHtml(4);
+?>
       </div>
 
 
