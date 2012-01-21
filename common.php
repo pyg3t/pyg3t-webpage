@@ -23,7 +23,7 @@ function our_header(){
 }
 
 /* Print out the title and the navigation bar */
-function title_and_navigation(){
+function title_and_navigation($current_page){
   global $tab;
   /* The menu is generated from $menu variable. A node that contains more menu
      content is represented by an array and a node that is a link is represented
@@ -41,22 +41,27 @@ function title_and_navigation(){
   p(3, "<div id=\"top\">\n");
   p(4, "<h1>Homepage for PyG3T and PoProofRead</h1>\n");
   p(3, "</div>\n");
-  p(3, "<div id=\"leftnav\">\n");
-  menu(array($menu), 4);
+  p(3, "<div id=\"navigation\">\n");
+  p(4, "<ul>\n");
+  menu(array($menu), 4, 0, $current_page);
+  p(4, "</ul>\n");
   p(3, "</div>\n");
   p(3, "<!-- HERE BEGINS THE CODE FOR THIS PAGE -->\n");
 }
 
-function menu($menu, $level){
+function menu($menu, $indentlevel, $level, $current_page){
   global $tab;
   foreach($menu as $el){
     if (gettype($el[0]) == "array"){
-      echo(str_repeat($tab, $level) . "<ul>\n");
-      menu($el, $level+1);
-      echo(str_repeat($tab, $level) . "</ul>\n");
-      } else {
+      menu($el, $indentlevel, $level+1, $current_page);
+    } else {
       foreach($el as $key=>$value){
-	echo(str_repeat($tab, $level) . "<li><a href=\"" . $value . "\">" . $key . "</a></li>\n");
+	if ($value==$current_page){
+	  $current=" id=\"currentpage\"";
+	} else {
+	  $current="";}
+	echo(str_repeat($tab, $indentlevel) .
+	     "<li class=\"level$level\"$current><a href=\"$value\">$key</a></li>\n");
       }
     }
   }

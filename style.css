@@ -1,7 +1,7 @@
 /* ========== Style sheet for the PyG3T and PoProofRead homepage ==========
-
+   
    A "*" in a comment means that the concept is explained in this header.   
-
+   
    padding: Space between the element and the border (inside the border).
    margin : Space around elements (outside the border).
    */
@@ -11,62 +11,108 @@
    overwritten */
 #container
 {
-width: 90%;              /* Restrict page to 90% of the total width */
-margin: 10px auto;       /* auto means determined by browser. */
-background-color: #fff;
-color: #333;             /* Font color */
-border: 1px solid gray;
-line-height: 130%;       /* Add a little more space between lines of text */
+    width: 90%;              /* Restrict page to 90% of the total width */
+    margin: 10px auto;       /* auto means determined by browser. */
+    border: 1px solid gray;
+    line-height: 130%;       /* Add a little more space between lines of text */
 }
 
 #top
 {
-padding: .5em;
-background-color: #ddd;
-border-bottom: 1px solid gray;
+    background-color: #D0D0D0;
+    border-bottom: 1px solid gray;
+    /*background-image:url('gradient.jpeg');
+    background-repeat:repeat-x;*/
 }
 
 #top h1
 {
-padding: 0;
-margin: 0;
+    font-family: Georgia, serif;
+    text-align: center;
+    padding: 50px 0px;
+    margin:0;
 }
 
-#leftnav
+#navigation
 {
-float: left;
-width: 160px;
-margin: 0;
-padding: 1em;
+    font-family: Georgia, serif;
+    float: left;
+    width: 180px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+#navigation ul{
+    list-style: none;
+    margin: 0px; 
+    padding: 0px;
+}
+
+#navigation li {
+    background: #D0D0D0;
+    display: block;
+    width: 174px;
+    float: left;
+    margin: 5px 5px 0px 5px;
+    padding: 0;
+    border: 1px solid grey;
+}
+
+#navigation a {
+    /*    font-weight: bold;*/
+    text-decoration: none;
+    display:block;
+}
+
+
+#navigation .level1 a{
+    font-size: 28px;
+    padding: 8px 5px;
+}
+
+#navigation .level2 a{
+    font-size: 20px;
+    padding: 5px 15px;
+}
+	
+#navigation a:hover{
+    color: white;
+    background: #A8A8A8;
+}
+
+#navigation a:visited{
+    color: black;
+}
+
+#navigation #currentpage a{
+    background: #A8A8A8;
+    color: black;
+}
+
+#navigation p{
+    margin: 0 0 1em 0;
 }
 
 #content
 {
-margin-left: 200px;
-border-left: 1px solid gray;
-padding: 1em;
-max-width: 36em;
+    margin-left: 180px;
+    /*border-left: 1px solid gray;*/
+    padding: 1em;
+    max-width: 36em;
 }
 
 #footer
 {
-clear: both;
-margin: 0;
-padding: .5em;
-color: #333;
-background-color: #ddd;
-border-top: 1px solid gray;
+    clear: both;
+    margin: 0;
+    padding: .5em;
+    color: #333;
+    background-color: #ddd;
+    border-top: 1px solid gray;
 }
 
-#leftnav p{ margin: 0 0 1em 0; }
 #content h2 { margin: 0 0 .5em 0; }
-
-#leftnav ul{
-list-style: none;
-/* margin-left: 0px; */
-padding-left: 10px;
-}
-
 
 #news_item{
     background-color: #ddd;
