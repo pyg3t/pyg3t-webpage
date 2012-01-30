@@ -9,27 +9,26 @@
 
 /* Contains the entire page and therefore applies to all content unless
    overwritten */
+
+/* 61a727 */
 #container
 {
     width: 90%;              /* Restrict page to 90% of the total width */
     margin: 10px auto;       /* auto means determined by browser. */
-    border: 1px solid gray;
     line-height: 130%;       /* Add a little more space between lines of text */
 }
 
 #top
 {
-    background-color: #D0D0D0;
-    border-bottom: 1px solid gray;
-    /*background-image:url('gradient.jpeg');
-    background-repeat:repeat-x;*/
+    background-image:url('graphics/header.png');
+    background-repeat:no-repeat;
 }
 
 #top h1
 {
     font-family: Georgia, serif;
-    text-align: center;
-    padding: 50px 0px;
+/*    text-align: center;*/
+    padding: 40px 0px 50px 320px;
     margin:0;
 }
 
@@ -39,7 +38,7 @@
     float: left;
     width: 180px;
     margin: 0;
-    padding: 0;
+    padding: 20px 0px 20px 0px;
     margin-bottom: 5px;
 }
 
@@ -50,35 +49,35 @@
 }
 
 #navigation li {
-    background: #D0D0D0;
-    display: block;
-    width: 174px;
     float: left;
-    margin: 5px 5px 0px 5px;
+    margin: 5px 5px 0px 20px;
     padding: 0;
-    border: 1px solid grey;
 }
 
 #navigation a {
     /*    font-weight: bold;*/
     text-decoration: none;
     display:block;
+    width: 260px;
+    height: 30px;
+    background-image:url('graphics/button.png');
+    background-repeat:no-repeat;
 }
 
 
 #navigation .level1 a{
     font-size: 28px;
-    padding: 8px 5px;
+    padding: 10px 10px;
 }
 
 #navigation .level2 a{
     font-size: 20px;
-    padding: 5px 15px;
+    padding: 10px 20px;
 }
 	
 #navigation a:hover{
-    color: white;
-    background: #A8A8A8;
+    background-image:url('graphics/button-hover.png');
+    background-repeat:no-repeat;
 }
 
 #navigation a:visited{
@@ -86,8 +85,8 @@
 }
 
 #navigation #currentpage a{
-    background: #A8A8A8;
-    color: black;
+    background-image:url('graphics/button-active.png');
+    background-repeat:no-repeat;
 }
 
 #navigation p{
@@ -96,9 +95,9 @@
 
 #content
 {
-    margin-left: 180px;
+    margin-left: 310px;
     /*border-left: 1px solid gray;*/
-    padding: 1em;
+    padding: 25px;
     max-width: 36em;
 }
 
