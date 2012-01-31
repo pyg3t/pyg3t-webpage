@@ -168,17 +168,27 @@ class BlogFeed
     global $tab;
     $out = Array();
     $list = False;
+    $before_list = 0;
+
     foreach($text as $line){
       if(substr($line, 0, 8) == "&nbsp;* "){
-	if ($list){
-	  $out[] = $tab . "<li>" . substr($line, 8, -6) . "</li>";
-	} else {
+	if (!$list){
 	  $list = True;
-	  $out[] = "<lu>";
+	  $before_list = count($out)-1;
+	  $out[] = "<ul>";
 	}
+	/* If there is an ending paragraph in a list */
+	if (substr($line, -4) == "</p>"){
+	  if (substr($out[$before_list], -6) == "<br />"){
+	    $out[$before_list] = substr($out[$before_list], 0, -6);
+	  }
+	  $out[$before_list] .= "</p>";
+	  $line = substr($line, 0, -4);
+	}
+	$out[] = $tab . "<li>" . str_replace('<br />', '', substr($line, 8)) . "</li>";
       } else {
 	if ($list){
-	  $out[] = "</lu>";
+	  $out[] = "</ul>";
 	  $list = False;
 	} else {
 	  $out[] = $line;
