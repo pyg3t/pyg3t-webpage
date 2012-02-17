@@ -13,13 +13,15 @@
 /* 61a727 */
 #container
 {
-    width: 90%;              /* Restrict page to 90% of the total width */
+    width: 1000px;              /* Restrict page to 90% of the total width */
     margin: 10px auto;       /* auto means determined by browser. */
     line-height: 130%;       /* Add a little more space between lines of text */
 }
 
+
 #top
 {
+    background-color: red;
     background-image:url('graphics/header.png');
     background-repeat:no-repeat;
 }
@@ -36,10 +38,15 @@
 {
     font-family: Georgia, serif;
     float: left;
-    width: 180px;
+    width: 280px;
     margin: 0;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0px 00px 0px;
     margin-bottom: 5px;
+    border-left: 40px solid #5483d7;
+    /*background-image:url('64.png'), url('64.png');
+    background-repeat:no-repeat, no-repeat;
+    background-position:left top, left bottom;*/
+
 }
 
 #navigation ul{
@@ -99,6 +106,7 @@
     /*border-left: 1px solid gray;*/
     padding: 25px;
     max-width: 36em;
+    background-color: white;
 }
 
 #footer
@@ -107,8 +115,7 @@
     margin: 0;
     padding: .5em;
     color: #333;
-    background-color: #ddd;
-    border-top: 1px solid gray;
+    background-color: #5483d7;
 }
 
 #content h2 { margin: 0 0 .5em 0; }
