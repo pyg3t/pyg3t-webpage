@@ -13,7 +13,7 @@
 /* 61a727 */
 #container
 {
-    width: 1000px;              /* Restrict page to 90% of the total width */
+    width: 960px;              /* Restrict page to 90% of the total width */
     margin: 10px auto;       /* auto means determined by browser. */
     line-height: 130%;       /* Add a little more space between lines of text */
 }
@@ -21,7 +21,7 @@
 
 #top
 {
-    background-color: red;
+    /*background-color: red;*/
     background-image:url('graphics/header.png');
     background-repeat:no-repeat;
 }
@@ -30,7 +30,7 @@
 {
     font-family: Georgia, serif;
 /*    text-align: center;*/
-    padding: 40px 0px 50px 320px;
+    padding: 50px 0px 40px 290px;
     margin:0;
 }
 
@@ -38,11 +38,11 @@
 {
     font-family: Georgia, serif;
     float: left;
-    width: 280px;
+    width: 260px;
     margin: 0;
-    padding: 20px 0px 00px 0px;
+    padding: 20px 0px 0px 0px;
     margin-bottom: 5px;
-    border-left: 40px solid #5483d7;
+    /*border-left: 40px solid #5483d7;*/
     /*background-image:url('64.png'), url('64.png');
     background-repeat:no-repeat, no-repeat;
     background-position:left top, left bottom;*/
@@ -57,7 +57,7 @@
 
 #navigation li {
     float: left;
-    margin: 5px 5px 0px 20px;
+    margin: 0px 0px 0px 0px;
     padding: 0;
 }
 
@@ -67,7 +67,7 @@
     display:block;
     width: 260px;
     height: 30px;
-    background-image:url('graphics/button.png');
+    background-image:url('graphics/button_base.png');
     background-repeat:no-repeat;
 }
 
