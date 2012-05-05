@@ -1,0 +1,25 @@
+= Adding pages to the PyG3T and PoProofRead webpage =
+
+== Add and entry in the navigation menu ==
+
+The first step in adding a page to the website is to add it to the
+navigation menu on the left. It is auto-generated from a hierarchy
+described in php as an array of associative arrays, where the key is
+the name and the value is the link.
+
+To add a page:
+1. Open the file "common.php"
+2. Find the variable $menu in the function title_and_navigation
+3. Add you page at the appropriate placement as Array("Name" => "link")
+
+If the page that you are adding is not a part of the main page theme,
+e.g. if it is auto-generated HTML documentation, then that is al that
+is required.
+
+== Making a new page ==
+
+To add a page to the site that will have the same theme as the rest
+there is a minimal amount of "boiler plate" code that must be
+added. This is already present in the file "template.php", so to form
+a new page you need only copy this file and name the copy as your new
+page.
