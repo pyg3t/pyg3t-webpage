@@ -16,12 +16,12 @@
     width: 960px;              /* Restrict page to 90% of the total width */
     margin: 10px auto;       /* auto means determined by browser. */
     line-height: 130%;       /* Add a little more space between lines of text */
+    background-color: white;
 }
 
 
 #top
 {
-    /*background-color: red;*/
     background-image:url('graphics/header.png');
     background-repeat:no-repeat;
 }
@@ -29,7 +29,6 @@
 #top h1
 {
     font-family: Georgia, serif;
-/*    text-align: center;*/
     padding: 50px 0px 40px 290px;
     margin:0;
 }
@@ -40,13 +39,21 @@
     float: left;
     width: 260px;
     margin: 0;
-    padding: 20px 0px 0px 0px;
+    padding: 32px 0px 0px 0px;
     margin-bottom: 5px;
     /*border-left: 40px solid #5483d7;*/
-    /*background-image:url('64.png'), url('64.png');
-    background-repeat:no-repeat, no-repeat;
-    background-position:left top, left bottom;*/
+    background-image: url('graphics/navigation_ul.png');
+    background-repeat:no-repeat;
+    background-position:left top;
+}
 
+#navigation a:visited{
+    color: black;
+}
+
+
+#navigation p{
+    margin: 0 0 1em 0;
 }
 
 #navigation ul{
@@ -61,66 +68,120 @@
     padding: 0;
 }
 
-#navigation a {
+/* level 1 */
+#navigation .level1 a{
     /*    font-weight: bold;*/
     text-decoration: none;
     display:block;
     width: 260px;
     height: 30px;
-    background-image:url('graphics/button_base.png');
+    font-size: 24px;
+    padding: 14px 0px 6px 40px;
+    background-image: url('graphics/button_base.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+#navigation .level1.currentpage a:link{
+    background-image:url('graphics/button_current.png');
     background-repeat:no-repeat;
+    background-position: left top;
+}
+
+#navigation .level1 a:hover{
+    background-image:url('graphics/button_hover.png');
+    background-repeat:no-repeat;
+    background-position: left top;
+}
+
+#navigation .last a{
+    background-image:
+    url('graphics/button_last_cover.png'),
+    url('graphics/button_base.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, left bottom;
+}
+
+#navigation .last.currentpage a:link{
+    background-image:
+    url('graphics/button_last_cover.png'),
+    url('graphics/button_current.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, left bottom;
+}
+
+#navigation .last a:hover{
+    background-image:
+    url('graphics/button_last_cover.png'),
+    url('graphics/button_hover.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, left bottom;
 }
 
 
-#navigation .level1 a{
-    font-size: 28px;
-    padding: 10px 10px;
-}
+/* level 2 */
 
 #navigation .level2 a{
-    font-size: 20px;
-    padding: 10px 20px;
+    /*    font-weight: bold;*/
+    text-decoration: none;
+    display:block;
+    width: 260px;
+    height: 15px;
+    font-size: 16px;
+    padding: 7px 0px 13px 50px;
+    background-image: url('graphics/button_base_small.png');
+    background-repeat: no-repeat;
+    background-position: left top;
 }
-	
-#navigation a:hover{
-    background-image:url('graphics/button-hover.png');
+
+#navigation .level2.currentpage a:link{
+    background-image:url('graphics/button_current_small.png');
     background-repeat:no-repeat;
+    background-position: left top;
 }
 
-#navigation a:visited{
-    color: black;
-}
-
-#navigation #currentpage a{
-    background-image:url('graphics/button-active.png');
+#navigation .level2 a:hover{
+    background-image:url('graphics/button_hover_small.png');
     background-repeat:no-repeat;
-}
-
-#navigation p{
-    margin: 0 0 1em 0;
+    background-position: left top;
 }
 
 #content
 {
-    margin-left: 310px;
-    /*border-left: 1px solid gray;*/
+    margin: 25px 25px 0px 260px;
     padding: 25px;
-    max-width: 36em;
-    background-color: white;
+    background-color: #A0CFEC;
+    background-image:
+    url('graphics/main_ul_corner.png'),
+    url('graphics/main_ur_corner.png'),
+    url('graphics/main_le.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right top, left bottom;
+}
+
+#content.expand
+{
+    height: 245px;
 }
 
 #footer
 {
     clear: both;
-    margin: 0;
-    padding: .5em;
+    margin: 0px 25px 0px 0px;
+    padding: 10px 0px 10px 15px;
     color: #333;
-    background-color: #5483d7;
+    background-color: #a7e571;
+    background-image:
+    url('graphics/footer_ul_corner.png'),
+    url('graphics/footer_ll_corner.png'),
+    url('graphics/footer_lr_corner.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left top, left bottom, right bottom;
 }
 
 #content h2 { margin: 0 0 .5em 0; }
 
 #news_item{
-    background-color: #ddd;
+    /*background-color: #ddd;*/
 }
 /* ######################################################################  */

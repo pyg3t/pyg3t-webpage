@@ -51,17 +51,27 @@ function title_and_navigation($current_page){
 
 function menu($menu, $indentlevel, $level, $current_page){
   global $tab;
-  foreach($menu as $el){
+  foreach($menu as $index=>$el){
     if (gettype($el[0]) == "array"){
       menu($el, $indentlevel, $level+1, $current_page);
     } else {
       foreach($el as $key=>$value){
+	$classes="level$level";
 	if ($value==$current_page){
-	  $current=" id=\"currentpage\"";
+	  $classes.=" currentpage";
 	} else {
-	  $current="";}
+	  $classes.="";
+	}
+	if ($index == count($menu)-1 && $level == 1){
+	  $classes.=" last";
+	} else {
+	  $classes.="";
+	}
+
+	$classstring = "class=\"$classes\"";
+
 	echo(str_repeat($tab, $indentlevel) .
-	     "<li class=\"level$level\"$current><a href=\"$value\">$key</a></li>\n");
+	     "<li $classstring><a href=\"$value\">$key</a></li>\n");
       }
     }
   }
