@@ -1,0 +1,29 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="index">
+  <info>
+    <credit type="author">
+      <name>Kenneth Nielsen</name>
+      <email>k.nielsen81@gmail.com</email>
+      <years>2011</years>
+    </credit>
+  </info>
+  
+  <title><app>PoProofRead</app> Help</title>
+  <p>Welcome to the <app>PoProofRead</app> help pages, we hope they
+  will be helpful to you.</p>
+  <p> Should you encounter a problem or have a questions that is not
+  covered properly in these help pages, and you think it should be,
+  feel free to file a <link
+  href="https://bugs.launchpad.net/poproofread">wish-list bug</link>
+  about it.</p>
+  <section id='introduction'>
+    <title>Introduction</title>
+  </section>
+  <section id='user'>
+    <title>User documentation</title>
+  </section>
+  <section id='developer'>
+    <title>Developer documentation</title>
+  </section>
+</page>

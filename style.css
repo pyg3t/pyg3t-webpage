@@ -160,7 +160,7 @@
 
 #content.expand
 {
-    height: 280px;
+    height: 400px;
 }
 
 #footer
@@ -182,5 +182,10 @@
 
 #news_item{
     /*background-color: #ddd;*/
+}
+
+img.floatRight { 
+    float: right; 
+    margin: 4px;
 }
 /* ######################################################################  */

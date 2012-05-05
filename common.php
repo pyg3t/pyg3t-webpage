@@ -32,7 +32,10 @@ function title_and_navigation($current_page){
 		array("Pyg3t" => "pyg3t_home.php"),
 		array(array("Install" => "pyg3t_install.php")),
 		array("PoProofRead" => "ppr_home.php"),
-		array(array("Install" => "ppr_install.php")),
+		array(array("Install" => "ppr_install.php"),
+		      array("Documentation" => "ppr_documentation/html"),
+		      array("Development" => "ppr_development.php"),
+		      array("FAQ" => "ppr_faq.php")),
 		array("Donate" => "donate.php")
 		);
 

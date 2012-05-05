@@ -1,0 +1,98 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The structure of the code</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="jquery.js"></script><script type="text/javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body>
+<div class="header"><div class="trails"><div class="trail">
+<a class="trail" href="index.html" title="PoProofRead Help"><span class=" app">PoProofRead</span> Help</a> › <a class="trail" href="index.html#developer" title="Developer documentation">Developer documentation</a> » </div></div></div>
+<div class="body">
+<div class="hgroup"><h1 class="title"><span class="title">The structure of the code</span></h1></div>
+<div class="region">
+<div class="contents"></div>
+<div id="structure_introduction" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">Introduction</span></h2></div>
+<div class="region">
+<div class="contents"><p class="p">This page describes the structure of the code for <span class=" app">PoProofRead</span>. This information is not necessary to use the program and on mainly intended for people who wishes to contribute to the code or who are simply interested in the structure.</p></div>
+<div id="structure_tools" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">Development tools</span></h3></div>
+<div class="region"><div class="contents"><p class="p"><span class=" app">PoProofRead</span> is written in <span class=" link"><a href="http://python.org/" title="http://python.org/">Python</a></span>. It uses <span class=" link"><a href="http://www.gtk.org/" title="http://www.gtk.org/">GTK+</a></span> for the GUI front-end via
+      the <span class=" link"><a href="http://www.pygtk.org/" title="http://www.pygtk.org/">PyGTK</a></span>
+      bindings. The GTK+-GUI is made in <span class=" link"><a href="http://glade.gnome.org/" title="http://glade.gnome.org/"><span class=" app">Glade</span></a></span>. The
+      documentation is written in <span class=" link"><a href="http://projectmallard.org/" title="http://projectmallard.org/">Mallard</a></span>.</p></div></div>
+</div></div>
+</div>
+</div></div>
+<div id="structure_structure" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">Over-all code structure</span></h2></div>
+<div class="region">
+<div class="contents"><div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">The <span class=" app">PoProofRead</span> code structure</span></h3></div>
+<div class="region">
+<div class="contents"><div class="media media-image"><div class="inner"><img src="fig/code_overview.png" alt=""></div></div></div>
+<div class="desc">The <span class=" app">PoProofRead</span> code with file names and classes.</div>
+</div>
+</div></div></div>
+<div id="structure_poproofread_gtk" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">PoProofReadGtkGUI</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">The <span class=" code">PoProofReadGtkGUI</span> class contains the main
+      GUI code for the <span class=" app">Gtk</span> front-end. It has methods for
+      all the GUI-signals and makes the changes in the GUI and in the
+      proofreading content that matches the signals.</p>
+<p class="p">This class makes use of the <span class=" code">PoProofRead</span> and
+      <span class=" code">Settings</span> classes.</p>
+</div></div>
+</div></div>
+<div id="structure_poproofread" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">PoProofRead</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">The code for <span class=" app">PoProofRead</span> er centered around the
+      <span class=" code">PoProofRead</span> class. This class contains all the data and
+      performs all the actions on the content like updating a comment or
+      setting a bookmark.</p>
+<p class="p">This class makes use of the <span class=" code">FileIO</span> class.</p>
+</div></div>
+</div></div>
+<div id="structure_fileio" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">FileIO</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">The <span class=" code">FileIO</span> class is responsible for loading, saving and
+      exporting content to files.</p>
+<p class="p">This class makes use of the <span class=" code">FileError</span> class.</p>
+</div></div>
+</div></div>
+<div id="structure_settings" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">Settings</span></h3></div>
+<div class="region"><div class="contents"><p class="p">The <span class=" code">Settings</span> class inherits from a series of
+      classes: <span class=" code">SettingsCommon</span>,
+      <span class=" code">SettingsFromFile</span> and
+      <span class=" code">SettingsFromSystem</span>. It contains defaults and reads
+      and writes settings either using the system settings or, if that
+      is unavailable, from a file.</p></div></div>
+</div></div>
+<div id="structure_exceptions" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">Exceptions</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">The file <span class=" file">custom_exception.py</span> contains a set of
+      custom exception:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list"><li class="list"><p class="p"><span class=" code">FileError</span></p></li></ul></div></div></div>
+</div></div>
+</div></div>
+</div>
+</div></div>
+<div class="sect sect-links">
+<div class="hgroup"><h2><span class="title">Further Reading</span></h2></div>
+<div class="contents"><div class="links guidelinks"><div class="inner">
+<div class="title"><h3><span class="title">More About</span></h3></div>
+<div class="region"><ul><li class="links"><a href="index.html#developer" title="Developer documentation">Developer documentation</a></li></ul></div>
+</div></div></div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="footer"><div class="copyrights"><div class="copyright">© 2011 Kenneth Nielsen</div></div></div>
+</body>
+</html>

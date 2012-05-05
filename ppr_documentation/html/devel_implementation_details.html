@@ -1,0 +1,78 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Implementation details</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="jquery.js"></script><script type="text/javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body>
+<div class="header"><div class="trails"><div class="trail">
+<a class="trail" href="index.html" title="PoProofRead Help"><span class=" app">PoProofRead</span> Help</a> › <a class="trail" href="index.html#developer" title="Developer documentation">Developer documentation</a> » </div></div></div>
+<div class="body">
+<div class="hgroup"><h1 class="title"><span class="title">Implementation details</span></h1></div>
+<div class="region">
+<div class="contents">
+<p class="p">This page contains details about specific aspects of the
+  implementation. The primary function of this page is to document
+  complicated aspects to the active authors themselves, and to
+  document non-obvious aspects and choices to new authors.</p>
+<div class="links sectionlinks"><div class="inner"><div class="region"><ul>
+<li class="links"><a href="devel_implementation_details.html#implementation_details_persistence" title="Persistence of objects">Persistence of objects</a></li>
+<li class="links"><a href="devel_implementation_details.html#implementation_details_gui_updating" title="GUI updating and toggling in-line mode">GUI updating and toggling in-line mode</a></li>
+</ul></div></div></div>
+</div>
+<div id="implementation_details_persistence" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">Persistence of objects</span></h2></div>
+<div class="region"><div class="contents"><p class="p">Both the <span class=" code">PoProofRead</span> and <span class=" code">FileIO</span> are
+    persistent throughout the entire program session and they
+    therefore both can be reset.</p></div></div>
+</div></div>
+<div id="implementation_details_gui_updating" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">GUI updating and toggling in-line mode</span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">Updating the GUI is done by the <span class=" code">update_gui</span> method
+    in the <span class=" code">PoProofReadGtkGUI</span> class. This method will
+    update the entire GUI according to the information about the
+    current diff part contained in the <span class=" code">PoProofRead</span>
+    instance. This has two implementations:</p>
+<div class="list"><div class="inner"><div class="region"><ol class="list" style="list-style-type:numbered">
+<li class="list"><p class="p">It is important that the comment text buffer is checked
+      for new content and saved before this method is called on the
+      same diff part. Otherwise the new content is lost and the
+      comment buffer will be updated with the old value. New comment
+      content should of course also be saved when moving to a new diff
+      part, but that is more obviously necessary since the work on the
+      current part is done.</p></li>
+<li class="list">
+<p class="p">Special care has to be taken for e.g. the toggle
+      in-line widget. When this widget is changed, it will emit a
+      signal that activates the <span class=" code">on_checkbutton_inline</span>
+      method, that in turn changes the internal state for the diff
+      part and after-wards calls the <span class=" code">update_gui</span>
+      method. However, the <span class=" code">update_gui</span> method needs to be
+      able to change the widget e.g. when moving to a new diff
+      part. This would also emit a signal if the widget gets a new
+      state and thus there is the potential for undesired recursive
+      calls.</p>
+<p class="p">While this recursion will never go more than one
+      level down because the signal is only emitted when the widget is
+      changed it was decided to avoid it explicitly by deactivating
+      the signal emission from the widget while it is being updated
+      from the <span class=" code">update_gui</span> method.</p>
+</li>
+</ol></div></div></div>
+</div></div>
+</div></div>
+<div class="sect sect-links">
+<div class="hgroup"><h2><span class="title">Further Reading</span></h2></div>
+<div class="contents"><div class="links guidelinks"><div class="inner">
+<div class="title"><h3><span class="title">More About</span></h3></div>
+<div class="region"><ul><li class="links"><a href="index.html#developer" title="Developer documentation">Developer documentation</a></li></ul></div>
+</div></div></div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="footer"><div class="copyrights"><div class="copyright">© 2011 Kenneth Nielsen</div></div></div>
+</body>
+</html>
