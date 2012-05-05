@@ -7,16 +7,40 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="260"
-   height="35"
+   height="40"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
    sodipodi:docname="button_base_small.svg">
   <defs
-     id="defs4" />
+     id="defs4">
+    <linearGradient
+       id="linearGradient3157">
+      <stop
+         style="stop-color:#a7e571;stop-opacity:1;"
+         offset="0"
+         id="stop3159" />
+      <stop
+         style="stop-color:#a7e571;stop-opacity:1;"
+         offset="1"
+         id="stop3161" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3157"
+       id="radialGradient3163"
+       cx="141.96428"
+       cy="26.168266"
+       fx="141.96428"
+       fy="26.168266"
+       r="108.30357"
+       gradientTransform="matrix(0.34460021,0,-1.7439192e-6,0.18549049,93.043406,16.217464)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,7 +49,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6"
-     inkscape:cx="84.985652"
+     inkscape:cx="154.39709"
      inkscape:cy="25.496805"
      inkscape:document-units="px"
      inkscape:current-layer="svg2"
@@ -47,7 +71,7 @@
        id="guide3937" />
     <sodipodi:guide
        orientation="0,1"
-       position="-10,25"
+       position="-6.4285714,30"
        id="guide3939" />
     <sodipodi:guide
        orientation="1,0"
@@ -74,14 +98,14 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-1017.3622)" />
+     transform="translate(0,-1012.3622)" />
   <rect
-     style="fill:#a7e571;fill-opacity:1;stroke:#76d127;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     style="fill:url(#radialGradient3163);fill-opacity:1;stroke:#76d127;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
      id="rect2986"
      width="216.60715"
-     height="34.999996"
+     height="40.178566"
      x="-7.2642187e-08"
-     y="2.6645353e-15"
+     y="-0.17857143"
      ry="0" />
   <rect
      style="fill:#ffffff;fill-opacity:1;stroke:#76d127;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -89,7 +113,7 @@
      width="21.844549"
      height="21.844549"
      x="20.771261"
-     y="-49.0952"
+     y="-44.0952"
      rx="5.9108782"
      ry="6.0961537" />
   <rect
@@ -107,16 +131,16 @@
      width="235.56857"
      height="27.274115"
      x="18.75"
-     y="24.898476"
+     y="29.898476"
      ry="9.4701796"
      rx="20.484222" />
   <rect
      style="fill:#a7e571;fill-opacity:1;stroke:#76d127;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
      id="rect2986-8"
      width="25.267859"
-     height="14.898476"
+     height="19.898476"
      x="204.73215"
      y="10"
-     ry="3.3032887"
+     ry="4.4118881"
      rx="5.7142859" />
 </svg>

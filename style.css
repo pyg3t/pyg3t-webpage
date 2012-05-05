@@ -41,13 +41,12 @@
     margin: 0;
     padding: 32px 0px 0px 0px;
     margin-bottom: 5px;
-    /*border-left: 40px solid #5483d7;*/
     background-image: url('graphics/navigation_ul.png');
     background-repeat:no-repeat;
     background-position:left top;
 }
 
-#navigation a:visited{
+#navigation a:visited, #navigation a:link{
     color: black;
 }
 
@@ -126,9 +125,9 @@
     text-decoration: none;
     display:block;
     width: 260px;
-    height: 15px;
+    height: 20px;
     font-size: 16px;
-    padding: 7px 0px 13px 50px;
+    padding: 9px 0px 11px 50px;
     background-image: url('graphics/button_base_small.png');
     background-repeat: no-repeat;
     background-position: left top;
@@ -161,7 +160,7 @@
 
 #content.expand
 {
-    height: 245px;
+    height: 280px;
 }
 
 #footer
