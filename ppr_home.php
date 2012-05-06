@@ -4,7 +4,8 @@
 
 <div id="content">
   <a href="graphics/ppr_main.png">
-    <img src="graphics/ppr_main.png" width="250 px" class="floatRight">
+    <img src="graphics/ppr_main.png" width="250 px" class="floatRight"
+    />
   </a>
   <h2>PoProofRead homepage</h2>
   <p>PoProofRead is a simple application for fast and easy

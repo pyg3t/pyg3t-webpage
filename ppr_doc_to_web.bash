@@ -28,7 +28,3 @@ yelp-build cache *.page
 echo "### Make html dir and convert content to html:"
 mkdir html
 yelp-build html -o html *.page
-
-echo
-echo "Sync to demon-sync dir with:"
-echo 'rsync --delete -avz html/ $HOME/demon-sync/WWW/poproofread'

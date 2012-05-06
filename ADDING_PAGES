@@ -23,3 +23,17 @@ there is a minimal amount of "boiler plate" code that must be
 added. This is already present in the file "template.php", so to form
 a new page you need only copy this file and name the copy as your new
 page.
+
+If your page does not contain enough content to have same height as
+the navigation manu you need to add the class "expand" to the content
+container. I.g. change
+
+<div id="content">
+ ...
+</div>
+
+to 
+
+<div id="content" class="expand">
+ ...
+</div>
